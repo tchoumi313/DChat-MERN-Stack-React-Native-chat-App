@@ -7,7 +7,7 @@ const cors =require('cors');
 const jwt = require('jsonwebtoken');
 
 const app = express();
-const port = 8000;
+const port = 8080;
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -32,7 +32,7 @@ app.get('/',()=>{
 })
 
 app.listen(port,()=>{
-    console.log("Server is running on port "+port);
+    console.log("Server is running on port http://localhost:"+port);
 });
 
 const User = require("./models/user");
