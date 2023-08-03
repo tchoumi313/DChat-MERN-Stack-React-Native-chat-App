@@ -15,7 +15,10 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 
 
-mongoose.connect(
+
+const startServer = async () => {
+    try {
+       mongoose.connect(
     "mongodb+srv://tchouminzikeubd:ZNdItc3QR0Nfmj38@cluster0.8oyf9cn.mongodb.net/",//mongoose connect url
     {
         useNewUrlParser:true,
@@ -26,14 +29,20 @@ mongoose.connect(
 }).catch((err)=>{
     console.log("Not connected to MongoDB");
 })
+        app.listen(8080, () => console.log('Server started on port http://localhost:8080'))
+    } catch (error) {
+        console.log(error)
+    }
 
+};
+startServer()
 app.get('/',()=>{
     return "Hello, world!";
 })
 
-app.listen(port,()=>{
+/*app.listen(port,()=>{
     console.log("Server is running on port http://localhost:"+port);
-});
+});*/
 
 const User = require("./models/user");
 const Message = require("./models/message");
