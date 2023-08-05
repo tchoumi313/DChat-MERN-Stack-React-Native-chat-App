@@ -12,7 +12,7 @@ const LoginScreen = () => {
 
 
   const navigation = useNavigation()
-/* 
+
   useEffect(()=>{
     const checkLoginStatus = async()=>{
      try {
@@ -28,7 +28,7 @@ const LoginScreen = () => {
     checkLoginStatus();
     },[])
     
-   */
+  
 
       
 

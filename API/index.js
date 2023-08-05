@@ -7,7 +7,7 @@ const cors =require('cors');
 const jwt = require('jsonwebtoken');
 
 const app = express();
-const port = 8080;
+const port = 8000;
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
