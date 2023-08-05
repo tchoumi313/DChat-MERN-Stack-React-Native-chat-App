@@ -29,7 +29,7 @@ const RegisterScreen = () => {
     console.log(user)
     // send post request
     axios
-      .post("http://192.168.43.239:8000/register", user)
+      .post("https://dalle-imagecrafter-dt.onrender.com/register", user)
       .then((response) => {
         console.log(response);
         alert("Messages: "+ response.data.message);

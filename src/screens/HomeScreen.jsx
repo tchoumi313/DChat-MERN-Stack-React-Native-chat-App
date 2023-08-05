@@ -76,7 +76,7 @@ const HomeScreen = () => {
       setIsLoading(true);
 
       axios
-        .get(`http://192.168.43.239:8000/users/${userId}`)
+        .get(`https://dalle-imagecrafter-dt.onrender.com/users/${userId}`)
         .then((response) => {
           setUsers(response.data);
           setFilteredUsers(response.data);

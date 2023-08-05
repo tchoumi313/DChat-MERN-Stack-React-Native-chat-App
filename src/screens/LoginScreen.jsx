@@ -13,7 +13,7 @@ const LoginScreen = () => {
 
   const navigation = useNavigation()
 
-  useEffect(()=>{
+/*   useEffect(()=>{
     const checkLoginStatus = async()=>{
      try {
       const token =  await AsyncStorage.getItem("TOKEN");
@@ -27,7 +27,7 @@ const LoginScreen = () => {
     
     checkLoginStatus();
     },[])
-    
+   */  
   
 
       
@@ -41,7 +41,7 @@ const LoginScreen = () => {
 
     setIsLoading(true); // Show the loading indicator
 
-    axios.post('http://192.168.43.239:8000/login', user)
+    axios.post('https://dalle-imagecrafter-dt.onrender.com/login', user)
     .then((response) =>{
       console.log(response)
       const token= response.data.token;

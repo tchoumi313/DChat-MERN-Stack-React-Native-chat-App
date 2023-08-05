@@ -9,7 +9,7 @@ const FriendRequest = ({ item, friendRequests, setFriendRequests }) => {
   const acceptRequest = async (friendRequestId) => {
     try {
       const response = await fetch(
-        "http://192.168.43.239:8000/friend-request/accept",
+        "https://dalle-imagecrafter-dt.onrender.com/friend-request/accept",
         {
           method: "POST",
           headers: {

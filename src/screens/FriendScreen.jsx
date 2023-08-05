@@ -34,7 +34,7 @@ const FriendsScreen = () => {
   const fetchFriendRequests = async () => {
     try {
       const response = await axios.get(
-        `http://192.168.43.239:8000/friend-request/${userId}`
+        `https://dalle-imagecrafter-dt.onrender.com/friend-request/${userId}`
       );
       if (response.status === 200) {
         const friendRequestsData = response.data.map((friendRequest) => ({
