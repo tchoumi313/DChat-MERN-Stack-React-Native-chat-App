@@ -13,7 +13,7 @@ const LoginScreen = () => {
 
   const navigation = useNavigation()
 
-/*   useEffect(()=>{
+   useEffect(()=>{
     const checkLoginStatus = async()=>{
      try {
       const token =  await AsyncStorage.getItem("TOKEN");
@@ -27,7 +27,6 @@ const LoginScreen = () => {
     
     checkLoginStatus();
     },[])
-   */  
   
 
       
